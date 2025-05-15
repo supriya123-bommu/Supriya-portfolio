@@ -7,14 +7,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    /* Styles omitted for brevity - same as original with personalized colors if desired */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #151515;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #222;
+    }
+    .skills, .education, .certifications, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 300px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .resume-download {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .download-btn i {
+      margin-right: 8px;
+    }
+    .contact p, .contact a {
+      text-align: center;
+      display: block;
+      margin: 5px 0;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 1.5rem;
+    }
+    footer {
+      background-color: #151515;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Supriya Bommu</h1>
     <nav>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
@@ -29,8 +118,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m Supriya Bommu — a highly dedicated and self-motivated Full Stack Developer pursuing MCA. I’m passionate about learning new technologies and contributing to real-world solutions through smart, scalable web development.</p>
-    <p>With a foundation in core programming, web technologies, and database design, I aim to deliver user-focused applications. I'm especially drawn to impactful projects such as mental health applications, cloud systems, and modern web platforms.</p>
+    <p>I’m Supriya Bommu — a highly dedicated and self-motivated Full Stack Developer currently pursuing MCA. I am passionate about learning new technologies and applying them to build scalable and impactful software solutions. My interests lie in mental health applications, cloud systems, and modern web platforms.</p>
     <div class="resume-download">
       <a href="Supriya%20Bommu.pdf" target="_blank" class="download-btn">
         <i class="fas fa-file-pdf"></i> View / Download Resume
@@ -38,13 +126,43 @@
     </div>
   </section>
 
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>Master of Computer Application (MCA)</h3>
+        <p>Annamacharya Institute of Technology & Sciences, Rajampet</p>
+        <p>2022 - 2024</p>
+        <p>CGPA: 8.9</p>
+      </div>
+      <div class="card">
+        <h3>Bachelor’s Degree (B.Sc)</h3>
+        <p>Sri Vaishnavi Degree College, Rajampet</p>
+        <p>2019 - 2022</p>
+        <p>CGPA: 8.55</p>
+      </div>
+      <div class="card">
+        <h3>Class XII</h3>
+        <p>Geethanjali Junior College, Rajampet</p>
+        <p>2017 - 2019</p>
+        <p>CGPA: 7.48</p>
+      </div>
+      <div class="card">
+        <h3>Class X</h3>
+        <p>Z.P. High School, Lebaka</p>
+        <p>2017</p>
+        <p>CGPA: 8.8</p>
+      </div>
+    </div>
+  </section>
+
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
-      <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript,React</p></div>
+      <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
       <div class="card"><h3>Backend</h3><p>Core Java, JSP, JEE, Spring Boot</p></div>
       <div class="card"><h3>Database</h3><p>SQL, JDBC, Hibernate</p></div>
-      <div class="card"><h3>Other</h3><p>Problem Solving, Communication, Git</p></div>
+      <div class="card"><h3>Other</h3><p>Git, Problem Solving, Communication</p></div>
     </div>
   </section>
 
@@ -53,8 +171,8 @@
     <div class="projects">
       <div class="card">
         <h3>Ensemble Hybrid Learning Methods for Automated Depression Detection</h3>
-        <p>Developed an intelligent system using ensemble hybrid learning techniques to automatically detect depression based on text data. The model classifies input as "depression" or "no depression" using machine learning and NLP techniques.</p>
-        <p>Technologies: Python, SQL, HTML, CSS</p>
+        <p>Developed an intelligent system using ensemble hybrid learning techniques to automatically detect depression based on text data. The model classifies input as "depression" or "no depression" using machine learning and NLP techniques</p>
+        <p><strong>Technologies:</strong> Python, SQL, HTML, CSS</p>
       </div>
     </div>
   </section>
@@ -63,14 +181,14 @@
     <h2>Certifications</h2>
     <div class="certifications">
       <div class="card">
-        <h3>Full Stack Web Development - Tap Academy</h3>
-        <p>Hands-on experience in HTML, CSS, JavaScript, React, Node.js, and MySQL with project-based learning.</p>
-        <p>Completed in April 2025.</p>
+        <h3>Full Stack Web Development</h3>
+        <p>Tap Academy — April 2025</p>
+        <p>Hands-on training in HTML, CSS, JavaScript, React, Node.js, and MySQL.</p>
       </div>
       <div class="card">
-        <h3>Basics of Python & Java - Excelr</h3>
-        <p>Participated in foundational programming workshops to strengthen core development skills.</p>
-        <p>Completed in December 2023.</p>
+        <h3>Basics of Python & Java</h3>
+        <p>Excelr — December 2023</p>
+        <p>Introductory programming certification focused on foundational concepts.</p>
       </div>
     </div>
   </section>
@@ -83,13 +201,15 @@
     <p>GitHub: <a href="https://github.com/supriya123-bommu" target="_blank">supriya123-bommu</a></p>
     <div class="social-icons">
       <a href="mailto:Supriyagoud678@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/supriya-bommu-317125272" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/supriya123-bommu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/supriya-bommu-317125272" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/supriya123-bommu" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Supriya Bommu. Created with dedication and Passion. Powered by HTML, CSS & JS.</p>
+    <p>© 2025 Supriya Bommu. Created with dedication and passion. Powered by HTML, CSS & JS.</p>
   </footer>
+
 </body>
 </html>
+  
